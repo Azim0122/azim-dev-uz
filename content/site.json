@@ -12,7 +12,7 @@
   "expertiseMedia": [
     { "video": "/assets/video/kuhni-milana-3-0.mp4" },
     { "video": "/assets/video/bskc.mp4" },
-    { "poster": "/assets/img/content/poster_showreel.png" },
+    {},
     { "video": "/assets/video/sktek.mp4" }
   ],
   "assets": {
