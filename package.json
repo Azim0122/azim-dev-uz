@@ -1,15 +1,21 @@
 {
   "name": "azim-dev-uz",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
-  "description": "Сайт-портфолио azim-dev.uz — статическая сборка, три языка (RU / UZ / EN)",
+  "description": "Сайт-портфолио azim-dev.uz — три языка (RU / UZ / EN), админка на Postgres",
   "type": "module",
   "scripts": {
-    "build": "node build.mjs",
-    "verify": "node build.mjs && node scripts/verify.mjs",
-    "dev": "node build.mjs && node scripts/serve.mjs"
+    "dev": "node scripts/dev.mjs",
+    "db:migrate": "node db/migrate.mjs",
+    "db:seed": "node db/seed.mjs",
+    "db:admin": "node db/create-admin.mjs",
+    "check": "node scripts/check.mjs"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "pg": "^8.23.0"
   }
 }

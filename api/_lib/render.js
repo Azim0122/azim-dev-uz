@@ -1,31 +1,12 @@
 /**
- * build.mjs — статический генератор сайта azim-dev.uz
+ * render.js — сборка HTML публичной страницы.
  *
- * Собирает три языковые версии одной страницы (RU / UZ / EN) из данных
- * в папке content/ и кладёт готовый сайт в dist/.
- *
- *   node build.mjs
- *
- * Никакого PHP и базы данных: контент — это JSON-файлы, которые лежат
- * рядом с кодом и версионируются в Git.
- *
- *   content/site.json   — общие настройки: домен, контакты
- *   content/ru|uz|en.json — все тексты интерфейса
- *   content/cases.json  — карточки работ (у каждой свои переводы)
+ * Разметка та же, что была в PHP-шаблоне, только собирается из данных:
+ * тексты интерфейса берутся из content/<язык>.json, а блок «Мои работы»
+ * — из базы (её читает content.js).
  */
 
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
-const DIST = path.join(ROOT, 'dist');
-
-const read = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
-
-const site = read('content/site.json');
-const cases = read('content/cases.json');
-const dicts = Object.fromEntries(site.languages.map((l) => [l, read(`content/${l}.json`)]));
+import { site, dictionaries as dicts } from './content.js';
 
 /* ------------------------------------------------------------------ */
 /* Утилиты                                                             */
@@ -156,11 +137,10 @@ const hero = (lang) => {
 };
 
 const caseItem = (item, lang) => {
-  const t = dicts[lang];
-  const tags = item.tags.map((key) => `<li>${esc(t.cases.tags[key] || key)}</li>`).join('');
+  const tags = item.tags.map((tag) => `<li>${esc(tag.title[lang])}</li>`).join('');
   const video = item.video
     ? `<div class="cases__item-video easy">
-                      <video data-src="${esc(item.video)}" width="631" height="378" muted loop playsinline poster="/${esc(item.image)}"></video>
+                      <video data-src="${esc(item.video)}" width="631" height="378" muted loop playsinline poster="${esc(item.image)}"></video>
                     </div>`
     : '';
 
@@ -174,29 +154,32 @@ const caseItem = (item, lang) => {
                   </div>
                   <div class="cases__item-image">
                     <picture>
-                      <img class="easy" src="/${esc(item.image)}" width="${item.width}" height="${item.height}" loading="lazy" alt="${esc(item.title[lang])}">
+                      <img class="easy" src="${esc(item.image)}" width="${item.width}" height="${item.height}" loading="lazy" alt="${esc(item.title[lang])}">
                     </picture>
                   </div>
                   ${video}
                 </div>`;
 };
 
-const casesSection = (lang) => {
+const casesSection = (lang, data) => {
   const t = dicts[lang];
-  const tabs = cases.categories
-    .map((key, i) => {
-      const active = i === 0 ? ' is-active' : '';
-      return `          <li class="${active.trim()}" data-tabs="tab"><span class="easy">${esc(t.cases.categories[key] || key)}</span></li>`;
+
+  // Вкладку без карточек не показываем — пустая вкладка на сайте
+  // выглядит как поломка, а в админке её могли просто ещё не наполнить.
+  const categories = data.categories.filter((category) => category.items.length > 0);
+  if (!categories.length) return '';
+
+  const tabs = categories
+    .map((category, i) => {
+      const active = i === 0 ? 'is-active' : '';
+      return `          <li class="${active}" data-tabs="tab"><span class="easy">${esc(category.title[lang])}</span></li>`;
     })
     .join('\n');
 
-  const panes = cases.categories
-    .map((key, i) => {
+  const panes = categories
+    .map((category, i) => {
       const active = i === 0 ? ' is-active' : '';
-      const items = cases.items
-        .filter((item) => item.categories.includes(key))
-        .map((item) => caseItem(item, lang))
-        .join('\n');
+      const items = category.items.map((item) => caseItem(item, lang)).join('\n');
       return `        <div class="cases__tab easy${active}" data-tabs="tab-content">
           <div class="cases__list">
 ${items}
@@ -565,7 +548,7 @@ const messengers = (lang) => {
 /* Страница целиком                                                    */
 /* ------------------------------------------------------------------ */
 
-const page = (lang) => {
+export const renderPage = (lang, data) => {
   const t = dicts[lang];
   const cssV = site.assets.cssVersion;
   const jsV = site.assets.jsVersion;
@@ -640,7 +623,7 @@ ${alternates}
       </button>
       <h1 class="visually-hidden">${esc(t.hero.h1)}</h1>
 ${hero(lang)}
-${casesSection(lang)}
+${casesSection(lang, data)}
 ${services(lang)}
 ${expertise(lang)}
 ${developments(lang)}
@@ -674,57 +657,3 @@ ${team(lang)}
 </html>
 `;
 };
-
-/* ------------------------------------------------------------------ */
-/* Служебные файлы                                                     */
-/* ------------------------------------------------------------------ */
-
-const sitemap = () => {
-  const urls = site.languages
-    .map((lang) => {
-      const alt = site.languages
-        .map((code) => `    <xhtml:link rel="alternate" hreflang="${code}" href="${absolute(code)}"/>`)
-        .join('\n');
-      return `  <url>
-    <loc>${absolute(lang)}</loc>
-${alt}
-    <changefreq>monthly</changefreq>
-    <priority>${lang === site.defaultLang ? '1.0' : '0.8'}</priority>
-  </url>`;
-    })
-    .join('\n');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls}
-</urlset>
-`;
-};
-
-const robots = () => `User-agent: *
-Allow: /
-
-Sitemap: ${site.domain}/sitemap.xml
-`;
-
-/* ------------------------------------------------------------------ */
-/* Сборка                                                              */
-/* ------------------------------------------------------------------ */
-
-fs.rmSync(DIST, { recursive: true, force: true });
-fs.mkdirSync(DIST, { recursive: true });
-
-fs.cpSync(path.join(ROOT, 'assets'), path.join(DIST, 'assets'), { recursive: true });
-fs.cpSync(path.join(ROOT, 'uploads'), path.join(DIST, 'uploads'), { recursive: true });
-
-for (const lang of site.languages) {
-  const dir = lang === site.defaultLang ? DIST : path.join(DIST, lang);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), page(lang));
-  console.log(`  ✓ ${base(lang)}index.html`);
-}
-
-fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap());
-fs.writeFileSync(path.join(DIST, 'robots.txt'), robots());
-console.log('  ✓ sitemap.xml, robots.txt');
-console.log(`\nГотово: ${cases.items.length} работ × ${site.languages.length} языка.`);

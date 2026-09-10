@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Админка — azim-dev.uz</title>
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/admin/admin.css?v=1.0.0">
+</head>
+
+<body>
+
+  <!-- Вход -->
+  <div class="screen screen--center" id="screen-login" hidden>
+    <form class="login" id="login-form" autocomplete="on">
+      <h1 class="login__title">Админка сайта</h1>
+      <p class="login__subtitle">azim-dev.uz</p>
+
+      <label class="field">
+        <span class="field__label">Логин</span>
+        <input class="field__input" type="text" name="login" autocomplete="username" required>
+      </label>
+
+      <label class="field">
+        <span class="field__label">Пароль</span>
+        <input class="field__input" type="password" name="password" autocomplete="current-password" required>
+      </label>
+
+      <p class="form-error" id="login-error" hidden></p>
+
+      <button class="button button--primary button--full" type="submit">Войти</button>
+    </form>
+  </div>
+
+  <!-- Рабочая область -->
+  <div class="screen" id="screen-app" hidden>
+    <header class="topbar">
+      <div class="topbar__brand">
+        <span class="topbar__logo">azim-dev.uz</span>
+        <span class="topbar__label">админка</span>
+      </div>
+
+      <nav class="tabs" id="tabs">
+        <button class="tabs__item is-active" type="button" data-view="cases">Работы</button>
+        <button class="tabs__item" type="button" data-view="categories">Вкладки</button>
+        <button class="tabs__item" type="button" data-view="tags">Тэги</button>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="button button--ghost" href="/" target="_blank" rel="noopener">Открыть сайт</a>
+        <button class="button button--ghost" type="button" id="logout">Выйти</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- Работы -->
+      <section class="view is-active" id="view-cases">
+        <div class="view__head">
+          <div>
+            <h2 class="view__title">Работы</h2>
+            <p class="view__hint">Порядок в списке — это порядок на сайте. Изменения появляются в течение минуты.</p>
+          </div>
+          <button class="button button--primary" type="button" id="case-add">Добавить работу</button>
+        </div>
+        <div id="cases-list" class="list"></div>
+      </section>
+
+      <!-- Вкладки -->
+      <section class="view" id="view-categories">
+        <div class="view__head">
+          <div>
+            <h2 class="view__title">Вкладки блока «Мои работы»</h2>
+            <p class="view__hint">Вкладка без карточек на сайте не показывается.</p>
+          </div>
+          <button class="button button--primary" type="button" data-add-taxonomy="categories">Добавить вкладку</button>
+        </div>
+        <div id="categories-list" class="list"></div>
+      </section>
+
+      <!-- Тэги -->
+      <section class="view" id="view-tags">
+        <div class="view__head">
+          <div>
+            <h2 class="view__title">Тэги карточек</h2>
+            <p class="view__hint">Небольшие подписи на обложке: «UX/UI», «Разработка», «SEO».</p>
+          </div>
+          <button class="button button--primary" type="button" data-add-taxonomy="tags">Добавить тэг</button>
+        </div>
+        <div id="tags-list" class="list"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Модальное окно: форма работы или справочника -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal__head">
+        <h2 class="modal__title" id="modal-title"></h2>
+        <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
+      </div>
+      <div class="modal__body" id="modal-body"></div>
+      <div class="modal__foot">
+        <p class="form-error" id="modal-error" hidden></p>
+        <div class="modal__foot-actions">
+          <button class="button button--ghost" type="button" data-close-modal>Отмена</button>
+          <button class="button button--primary" type="button" id="modal-save">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="/admin/admin.js?v=1.0.0" type="module"></script>
+</body>
+
+</html>
