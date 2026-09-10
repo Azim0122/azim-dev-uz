@@ -1,0 +1,178 @@
+{
+  "categories": ["popular", "all", "shops", "landings", "services", "tilda", "wordpress"],
+  "items": [
+    {
+      "id": "nikboor",
+      "url": "https://nikboor.ru/",
+      "image": "uploads/img/3d3e4c19ed59b58f149ebcae109835d8.webp",
+      "width": 1680,
+      "height": 909,
+      "categories": ["popular", "all", "landings", "wordpress"],
+      "tags": ["uxui", "dev", "seo", "content", "semantics"],
+      "title": { "ru": "Никбоор", "uz": "Nikboor", "en": "Nikboor" },
+      "description": {
+        "ru": "Готовая инфраструктура для размещения офиса, склада или производства",
+        "uz": "Ofis, ombor yoki ishlab chiqarishni joylashtirish uchun tayyor infratuzilma",
+        "en": "Ready-made infrastructure for offices, warehouses and production sites"
+      }
+    },
+    {
+      "id": "klyuch-an",
+      "url": "https://klyuch-an.ru",
+      "image": "uploads/img/klyuch-an.jpg",
+      "width": 1360,
+      "height": 762,
+      "categories": ["popular", "all", "shops"],
+      "tags": ["logo", "uxui", "dev", "content"],
+      "title": { "ru": "АН Ключ", "uz": "AN Klyuch", "en": "AN Klyuch" },
+      "description": {
+        "ru": "Сайт с объектами агентства недвижимости",
+        "uz": "Ko‘chmas mulk agentligi obyektlari uchun sayt",
+        "en": "Property listings site for a real-estate agency"
+      }
+    },
+    {
+      "id": "villa-aragosta",
+      "url": "https://villaaragosta.ru/",
+      "image": "uploads/img/2365d6672df8dbdc850e6053928117f5.webp",
+      "width": 1680,
+      "height": 909,
+      "categories": ["popular", "all", "landings", "tilda"],
+      "tags": ["dev", "seo", "content"],
+      "title": { "ru": "Villa Aragosta", "uz": "Villa Aragosta", "en": "Villa Aragosta" },
+      "description": {
+        "ru": "Премиальная площадка для свадеб, банкетов и частных мероприятий",
+        "uz": "To‘y, banket va xususiy tadbirlar uchun premium maydon",
+        "en": "A premium venue for weddings, banquets and private events"
+      }
+    },
+    {
+      "id": "svarog",
+      "url": "https://svarog.azim-dev.uz/",
+      "image": "uploads/img/bb2a222c2f35c756daf5fbe5e2df2e4e.webp",
+      "width": 1680,
+      "height": 905,
+      "categories": ["popular", "all", "landings", "services"],
+      "tags": ["uxui", "dev", "seo", "content", "semantics"],
+      "title": { "ru": "Svarog", "uz": "Svarog", "en": "Svarog" },
+      "description": {
+        "ru": "Делаем цифровую безопасность простой и надёжной",
+        "uz": "Raqamli xavfsizlikni sodda va ishonchli qilamiz",
+        "en": "Making digital security simple and dependable"
+      }
+    },
+    {
+      "id": "victorins",
+      "url": "https://victorins.com",
+      "image": "uploads/img/848591b1dc57e18b29782fc51a95bd14.webp",
+      "width": 1680,
+      "height": 987,
+      "categories": ["popular", "all", "tilda"],
+      "tags": ["dev", "seo", "content", "semantics"],
+      "title": { "ru": "Victorins", "uz": "Victorins", "en": "Victorins" },
+      "description": {
+        "ru": "Онлайн-галерея эксклюзивного искусства, антиквариата и коллекционных предметов",
+        "uz": "Eksklyuziv san’at, antikvariat va kolleksiya buyumlari onlayn galereyasi",
+        "en": "An online gallery of fine art, antiques and collectibles"
+      }
+    },
+    {
+      "id": "polistirolbeton-dom",
+      "url": "https://polistirolbeton-dom.ru",
+      "image": "uploads/img/polistirolbeton-dom.jpg",
+      "width": 1360,
+      "height": 762,
+      "categories": ["popular", "all", "shops"],
+      "tags": ["semantics", "logo", "uxui", "dev", "seo", "content"],
+      "title": {
+        "ru": "Полистиролбетон–Дом.ру",
+        "uz": "Polistirolbeton-Dom.ru",
+        "en": "Polistirolbeton-Dom.ru"
+      },
+      "description": {
+        "ru": "Сайт производителя домов из полистиролбетона",
+        "uz": "Polistirolbetondan uy ishlab chiqaruvchi kompaniya sayti",
+        "en": "Website for a manufacturer of polystyrene-concrete houses"
+      }
+    },
+    {
+      "id": "dablespace",
+      "url": "https://dable-space.vercel.app/",
+      "image": "uploads/img/88ebd1a3fbe16455ae949bbd34f900c1.webp",
+      "width": 1680,
+      "height": 908,
+      "categories": ["popular", "all", "landings", "services"],
+      "tags": ["uxui", "dev", "content", "semantics"],
+      "title": { "ru": "DableSpace", "uz": "DableSpace", "en": "DableSpace" },
+      "description": {
+        "ru": "Символ баланса в красоте и уходе",
+        "uz": "Go‘zallik va parvarishdagi muvozanat ramzi",
+        "en": "A symbol of balance in beauty and self-care"
+      }
+    },
+    {
+      "id": "matrix",
+      "url": "https://gadalka-front.vercel.app/",
+      "image": "uploads/img/7bf0feb36e9f572e846633f0269fcdc2.webp",
+      "width": 1680,
+      "height": 905,
+      "categories": ["popular", "all", "landings", "services"],
+      "tags": ["dev", "seo", "content", "semantics"],
+      "title": {
+        "ru": "Матрица Судьбы",
+        "uz": "Taqdir matritsasi",
+        "en": "Matrix of Destiny"
+      },
+      "description": {
+        "ru": "Система самопознания, основанная на сочетании нумерологии",
+        "uz": "Numerologiya uyg‘unligiga asoslangan o‘z-o‘zini anglash tizimi",
+        "en": "A self-discovery system built on numerology"
+      }
+    },
+    {
+      "id": "aqabur",
+      "url": "https://aqabur.ru",
+      "image": "uploads/img/aqabur.jpg",
+      "width": 1360,
+      "height": 762,
+      "categories": ["popular", "all", "shops"],
+      "tags": ["uxui", "dev", "seo", "content", "semantics"],
+      "title": { "ru": "АкваБур", "uz": "AquaBur", "en": "AquaBur" },
+      "description": {
+        "ru": "Сайт компании, занимающейся бурением на воду",
+        "uz": "Suv uchun quduq qazish bilan shug‘ullanuvchi kompaniya sayti",
+        "en": "Website for a water-well drilling company"
+      }
+    },
+    {
+      "id": "invitation",
+      "url": "https://invitation.azim-dev.uz/",
+      "image": "uploads/img/8732407ad72ed7ba61de7b95e8b9dc44.webp",
+      "width": 1680,
+      "height": 784,
+      "categories": ["popular", "all", "shops", "services"],
+      "tags": ["logo", "uxui", "dev", "seo", "content"],
+      "title": { "ru": "Invitation", "uz": "Invitation", "en": "Invitation" },
+      "description": {
+        "ru": "Цифровые свадебные приглашения в Узбекистане",
+        "uz": "O‘zbekistonda raqamli to‘y taklifnomalari",
+        "en": "Digital wedding invitations in Uzbekistan"
+      }
+    },
+    {
+      "id": "tesoro",
+      "url": "https://tesoromebel.ru",
+      "image": "uploads/img/tesoro.jpg",
+      "width": 1360,
+      "height": 762,
+      "categories": ["popular", "all", "shops"],
+      "tags": ["dev", "seo", "content", "semantics"],
+      "title": { "ru": "TESORO", "uz": "TESORO", "en": "TESORO" },
+      "description": {
+        "ru": "Интернет-магазин кухонь на заказ",
+        "uz": "Buyurtma asosidagi oshxonalar onlayn do‘koni",
+        "en": "An online store for made-to-order kitchens"
+      }
+    }
+  ]
+}

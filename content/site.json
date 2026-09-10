@@ -1,0 +1,23 @@
+{
+  "domain": "https://azim-dev.uz",
+  "defaultLang": "ru",
+  "languages": ["ru", "uz", "en"],
+  "contacts": {
+    "email": "info@azim-dev.uz",
+    "phoneDisplay": "+998 93 481 13 11",
+    "phoneHref": "tel:+998934811311",
+    "telegram": "https://t.me/Umurzakov22",
+    "whatsapp": "https://wa.me/998934811311"
+  },
+  "expertiseMedia": [
+    { "video": "/assets/video/kuhni-milana-3-0.mp4" },
+    { "video": "/assets/video/bskc.mp4" },
+    { "poster": "/assets/img/content/poster_showreel.png" },
+    { "video": "/assets/video/sktek.mp4" }
+  ],
+  "assets": {
+    "cssVersion": "3.0.0",
+    "jsVersion": "3.0.0"
+  },
+  "copyrightYears": "2023–2026"
+}

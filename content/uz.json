@@ -1,0 +1,242 @@
+{
+  "code": "uz",
+  "label": "O‘zbekcha",
+  "short": "UZ",
+  "htmlLang": "uz",
+  "ogLocale": "uz_UZ",
+  "meta": {
+    "title": "Azim — O‘zbekistonda veb-dasturchi | Sayt va veb-ilovalar yaratish",
+    "description": "Azim — O‘zbekistondan veb-dasturchi. WordPress, React, Firebase va Node.js asosida zamonaviy saytlar, onlayn do‘konlar, veb-ilovalar va avtomatlashtirish tizimlarini yarataman.",
+    "keywords": "veb-dasturchi O‘zbekiston, sayt yaratish Toshkent, sayt dasturchisi, WordPress dasturchi, React dasturchi, onlayn do‘kon yaratish, veb-ilovalar, Firebase, Node.js",
+    "author": "Azim",
+    "ogTitle": "Azim — veb-dasturchi va raqamli yechimlar muallifi",
+    "ogDescription": "Zamonaviy saytlar, veb-ilovalar ishlab chiqish va biznesni avtomatlashtirish. WordPress, React, Firebase, Node.js.",
+    "twitterTitle": "Azim — veb-dasturchi",
+    "twitterDescription": "Kalit topshirish shartida sayt va veb-ilovalar yaratish."
+  },
+  "nav": {
+    "cases": "Ishlar",
+    "services": "Xizmatlar",
+    "expertise": "Tajriba",
+    "developments": "Ishlanmalar",
+    "team": "Ko‘nikmalar",
+    "contacts": "Aloqa"
+  },
+  "cta": {
+    "discuss": "Loyihani muhokama qilish",
+    "greeting": "Assalomu alaykum! Loyihani muhokama qilmoqchiman"
+  },
+  "a11y": {
+    "logo": "Azim logotipi",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "phone": "Qo‘ng‘iroq qilish",
+    "menu": "Menyu",
+    "arrow": "Strelka",
+    "toggle": "Ochish yoki yopish",
+    "closeVideo": "Videoni yopish",
+    "decorTag": "Bezak teg",
+    "decorBird": "Bezak qush",
+    "copy": "Nusxalash",
+    "qrTelegram": "Telegram QR-kodi",
+    "qrWhatsapp": "WhatsApp QR-kodi",
+    "langSwitcher": "Tilni tanlash"
+  },
+  "hero": {
+    "h1": "Azim — veb-dasturchi: saytlar, veb-ilovalar va raqamli mahsulotlar",
+    "tags": [
+      "Tahlil",
+      "Dasturlash",
+      "SEO",
+      "Integratsiyalar",
+      "Marketing",
+      "AI",
+      "No-code"
+    ],
+    "titleLine1": "Men — raqamli loyihalarni",
+    "titleLine2": "yaratish va rivojlantirishda",
+    "titleAccent": "ishonchli",
+    "titleTail": " hamkoringizman.",
+    "text": "Sayt, lending, internet-xizmat yoki mobil ilovani ishga tushirishga yordam beraman — g‘oyadan to ishga tushirilgunga qadar to‘liq tsiklni o‘z zimmamga olaman.",
+    "showreel": "Shourilni ko‘rish"
+  },
+  "cases": {
+    "heading": "Mening ishlarim",
+    "categories": {
+      "popular": "Ommabop",
+      "all": "Barchasi",
+      "shops": "Onlayn do‘konlar",
+      "landings": "Lendinglar",
+      "services": "Xizmat saytlari",
+      "tilda": "Tilda",
+      "wordpress": "WordPress"
+    },
+    "tags": {
+      "logo": "Logo",
+      "uxui": "UX/UI",
+      "dev": "Dasturlash",
+      "seo": "SEO",
+      "content": "Kontent",
+      "semantics": "Semantika"
+    }
+  },
+  "services": {
+    "heading": "Xizmatlar",
+    "leadStart": "Biznesingiz uchun zarur bo‘lgan",
+    "leadMiddle": "barcha xizmatlar",
+    "leadAccent": "bizda mavjud",
+    "items": [
+      {
+        "title": "Tahlil",
+        "text": "Saytning texnik tahlili, SEO-audit, UX-tahlil, raqobatchilar tahlili, relevantlikning gibrid tahlili"
+      },
+      {
+        "title": "Dasturlash",
+        "text": "Saytlarni verstka qilish va dasturlash, ma’lumotlar bazasini loyihalash va yaratish, parserlar tayyorlash, texnik qo‘llab-quvvatlash"
+      },
+      {
+        "title": "SEO",
+        "text": "Semantik yadro yig‘ish, sayt strukturasini tuzish, targ‘ibot strategiyasini ishlab chiqish, semantikani joriy etish"
+      },
+      {
+        "title": "Marketing",
+        "text": "Bozor va raqobatchilar tahlili, biznesni raqamli muhitda rivojlantirishni strategik rejalashtirish"
+      },
+      {
+        "title": "AI-kontent",
+        "text": "Biznes uchun kreativ va sifatli foto, video hamda matnli kontent yaratish"
+      },
+      {
+        "title": "No-code",
+        "text": "Tezkor yechimlar: shablon yoki zero-bloklardan sayt yig‘ish, lid-formalar va qayta aloqa elementlarini ulash"
+      }
+    ]
+  },
+  "expertise": {
+    "heading": "Ekspertiza",
+    "lead": "Har bir loyihaga chuqur kirib boraman va mijoz biznesining o‘ziga xos jihatlarini o‘rganaman.",
+    "text": "Turli yo‘nalish va nishalarda ishlash tajribam bor. Eng yaxshi natijaga erishish uchun doimo bozorni, raqobatchilarni va maqsadli auditoriyani tahlil qilaman.",
+    "messengerTitle": "Messenjerga yozing",
+    "messengerSub": "Telegram, WhatsApp",
+    "items": [
+      "Oshxona va mebel",
+      "Ko‘chmas mulk",
+      "Septiklar",
+      "Yuk tashish"
+    ],
+    "more": "Va yana bir nechta qiziqarli yo‘nalish",
+    "tags": [
+      "Qurilish",
+      "Tarozi va savdo uskunalari",
+      "Quduq qazish",
+      "Xonalarni loyihalash",
+      "Raqs studiyalari",
+      "Tibbiy klinikalar",
+      "Hayvonlar uchun mahsulotlar",
+      "Ko‘kalamzorlashtirish",
+      "Avtomobil sotib olish",
+      "Turizm"
+    ]
+  },
+  "developments": {
+    "heading": "Raqamli yechimlar ishlab chiqish",
+    "item1Title": "2023-yildan beri biznes uchun zamonaviy saytlar, lendinglar va veb-ilovalar yarataman.",
+    "item1Text": "WordPress, Tilda, React, Firebase, Node.js va boshqa texnologiyalar bilan ishlayman.",
+    "item2Title": "2025-yilda yo‘nalishni kengaytirib, mobil ilovalar, veb-xizmatlar va biznes uchun avtomatlashtirish tizimlarini ishlab chiqishni boshladim."
+  },
+  "ticker": "Keling, birga ishlashni boshlaymiz",
+  "team": {
+    "heading": "Texnologik stek",
+    "aboutLabel": "O‘zim haqimda raqamlarda",
+    "yearsValue": "2+",
+    "yearsAccent": "yillik tajriba",
+    "yearsTail": "veb-dasturlashda",
+    "stats": [
+      {
+        "value": "30+",
+        "text": "amalga oshirilgan loyiha"
+      },
+      {
+        "value": "20+",
+        "text": "stekdagi texnologiya"
+      },
+      {
+        "value": "100%",
+        "text": "moslashuvchan yechimlar"
+      },
+      {
+        "value": "Full",
+        "text": "loyihaning to‘liq tsikli"
+      }
+    ],
+    "rightTitle": "Zamonaviy saytlar, veb-ilovalar va raqamli mahsulotlar ishlab chiqaman",
+    "rightText": "Dizayn va dasturlashdan tortib ishga tushirish, tahlil va avtomatlashtirishgacha",
+    "items": [
+      {
+        "label": "Frontend dasturlash",
+        "tech": "HTML5 • CSS3 • JavaScript • React • React Native",
+        "text": "Moslashuvchan verstka, SPA-ilovalar, mobil interfeys va animatsiyalar"
+      },
+      {
+        "label": "CMS dasturlash",
+        "tech": "WordPress • Tilda • Shopify • MODX",
+        "text": "PHP’da mavzular yaratish, Zero Block, do‘konlar va maxsus yechimlar"
+      },
+      {
+        "label": "Backend dasturlash",
+        "tech": "PHP • Node.js • Express.js",
+        "text": "API, ma’lumotlar bazasi, avtorizatsiya va to‘lov integratsiyalari"
+      },
+      {
+        "label": "Cloud & Database",
+        "tech": "Firebase • Firestore • Auth • Functions",
+        "text": "Bulutli xizmatlar, ma’lumotlarni saqlash va foydalanuvchilarni boshqarish"
+      },
+      {
+        "label": "Integratsiyalar",
+        "tech": "Telegram API • Resend • CRM • Payments",
+        "text": "Jarayonlarni avtomatlashtirish, botlar va xizmatlarni ulash"
+      },
+      {
+        "label": "Tahlil va optimallashtirish",
+        "tech": "GA4 • Meta Pixel • Hotjar • PWA",
+        "text": "Foydalanuvchilar tahlili, unumdorlik va konversiyani oshirish"
+      },
+      {
+        "label": "Vositalar",
+        "tech": "Git • Vercel • Cloudflare • Figma",
+        "text": "Versiyalar nazorati, deploy, dizayn va saytlarni optimallashtirish"
+      }
+    ]
+  },
+  "footer": {
+    "tags": [
+      "Tahlil",
+      "UX/UI",
+      "Dasturlash",
+      "SEO",
+      "Integratsiyalar",
+      "Reklama",
+      "Marketing",
+      "AI",
+      "No-code"
+    ],
+    "heading": "Aloqa",
+    "policy": "Ma’lumotlarni qayta ishlash siyosati",
+    "author": "Azim"
+  },
+  "messengers": {
+    "title": "Menga yozing",
+    "titleTelegram": "Menga Telegramda yozing",
+    "titleWhatsapp": "Menga WhatsAppda yozing",
+    "telegramDesktop": "Kompyuterdan Telegramga yozish",
+    "whatsappDesktop": "Kompyuterdan WhatsAppga yozish",
+    "orQr": "yoki telefoningiz bilan QR-kodni skanerlang"
+  },
+  "js": {
+    "copySuccess": "Email nusxalandi!",
+    "copyError": "Nusxalab bo‘lmadi",
+    "collapse": "Yashirish",
+    "readMore": "To‘liq o‘qish"
+  }
+}

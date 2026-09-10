@@ -1,0 +1,221 @@
+{
+  "code": "en",
+  "label": "English",
+  "short": "EN",
+  "htmlLang": "en",
+  "ogLocale": "en_US",
+
+  "meta": {
+    "title": "Azim — Web Developer in Uzbekistan | Websites and Web Apps",
+    "description": "Azim is a web developer based in Uzbekistan, building modern websites, online stores, web apps and business automation with WordPress, React, Firebase and Node.js.",
+    "keywords": "web developer Uzbekistan, website development Tashkent, freelance web developer, WordPress developer, React developer, ecommerce development, web applications, Firebase, Node.js",
+    "author": "Azim",
+    "ogTitle": "Azim — web developer and builder of digital products",
+    "ogDescription": "Modern websites, web applications and business automation. WordPress, React, Firebase, Node.js.",
+    "twitterTitle": "Azim — Web Developer",
+    "twitterDescription": "End-to-end websites and web applications."
+  },
+
+  "nav": {
+    "cases": "Work",
+    "services": "Services",
+    "expertise": "Expertise",
+    "developments": "Products",
+    "team": "Skills",
+    "contacts": "Contact"
+  },
+
+  "cta": {
+    "discuss": "Discuss a project",
+    "greeting": "Hello! I'd like to discuss a project"
+  },
+
+  "a11y": {
+    "logo": "Azim logo",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "phone": "Call",
+    "menu": "Menu",
+    "arrow": "Arrow",
+    "toggle": "Expand or collapse",
+    "closeVideo": "Close video",
+    "decorTag": "Decorative tag",
+    "decorBird": "Decorative bird",
+    "copy": "Copy",
+    "qrTelegram": "Telegram QR code",
+    "qrWhatsapp": "WhatsApp QR code",
+    "langSwitcher": "Choose language"
+  },
+
+  "hero": {
+    "h1": "Azim — web developer: websites, web apps and digital products",
+    "tags": ["Analytics", "Development", "SEO", "Integrations", "Marketing", "AI", "No-code"],
+    "titleLine1": "I'm your reliable partner",
+    "titleLine2": "in building and growing",
+    "titleAccent": "digital",
+    "titleTail": " projects.",
+    "text": "I'll help you ship a website, landing page, online service or mobile app — covering the full cycle from the first idea to launch.",
+    "showreel": "Watch showreel"
+  },
+
+  "cases": {
+    "heading": "Selected work",
+    "categories": {
+      "popular": "Featured",
+      "all": "All",
+      "shops": "Online stores",
+      "landings": "Landing pages",
+      "services": "Service sites",
+      "tilda": "Tilda",
+      "wordpress": "WordPress"
+    },
+    "tags": {
+      "logo": "Logo",
+      "uxui": "UX/UI",
+      "dev": "Development",
+      "seo": "SEO",
+      "content": "Content",
+      "semantics": "Semantics"
+    }
+  },
+
+  "services": {
+    "heading": "Services",
+    "leadStart": "Everything your business needs",
+    "leadMiddle": "in one place",
+    "leadAccent": "— end to end",
+    "items": [
+      {
+        "title": "Analytics",
+        "text": "Technical site audits, SEO audits, UX analytics, competitor research and hybrid relevance analysis"
+      },
+      {
+        "title": "Development",
+        "text": "Markup and programming, database design and implementation, custom parsers, ongoing support and maintenance"
+      },
+      {
+        "title": "SEO",
+        "text": "Keyword research, site structure, promotion strategy and hands-on implementation of semantics"
+      },
+      {
+        "title": "Marketing",
+        "text": "Market and competitor analysis, strategic planning for growing a business in digital"
+      },
+      {
+        "title": "AI content",
+        "text": "Creative, high-quality photo, video and text content generated for your business"
+      },
+      {
+        "title": "No-code",
+        "text": "Fast solutions: sites assembled from templates or zero blocks, lead forms and feedback widgets wired in"
+      }
+    ]
+  },
+
+  "expertise": {
+    "heading": "Expertise",
+    "lead": "I go deep on every project and learn how the client's business actually works.",
+    "text": "I've worked across many niches and industries, and I always analyse the market, the competition and the target audience to get the best possible result.",
+    "messengerTitle": "Message me",
+    "messengerSub": "Telegram, WhatsApp",
+    "items": ["Kitchens & furniture", "Real estate", "Septic systems", "Freight & logistics"],
+    "more": "And a few more interesting fields",
+    "tags": [
+      "Construction",
+      "Weighing & retail equipment",
+      "Well drilling",
+      "Interior planning",
+      "Dance studios",
+      "Medical clinics",
+      "Pet supplies",
+      "Landscaping",
+      "Car buying services",
+      "Tourism"
+    ]
+  },
+
+  "developments": {
+    "heading": "Building digital products",
+    "item1Title": "Since 2023 I've been building modern websites, landing pages and web apps for businesses.",
+    "item1Text": "I work with WordPress, Tilda, React, Firebase, Node.js and other technologies.",
+    "item2Title": "In 2025 I expanded into mobile apps, web services and automation systems for business."
+  },
+
+  "ticker": "Let's start working together",
+
+  "team": {
+    "heading": "Technology stack",
+    "aboutLabel": "About me in numbers",
+    "yearsValue": "2+",
+    "yearsAccent": "years of experience",
+    "yearsTail": "in web development",
+    "stats": [
+      { "value": "30+", "text": "projects delivered" },
+      { "value": "20+", "text": "technologies in the stack" },
+      { "value": "100%", "text": "responsive solutions" },
+      { "value": "Full", "text": "development cycle covered" }
+    ],
+    "rightTitle": "I build modern websites, web applications and digital products",
+    "rightText": "From design and development through launch, analytics and automation",
+    "items": [
+      {
+        "label": "Frontend development",
+        "tech": "HTML5 • CSS3 • JavaScript • React • React Native",
+        "text": "Responsive markup, SPAs, mobile interfaces and animation"
+      },
+      {
+        "label": "CMS development",
+        "tech": "WordPress • Tilda • Shopify • MODX",
+        "text": "Custom PHP themes, Zero Block, stores and bespoke solutions"
+      },
+      {
+        "label": "Backend development",
+        "tech": "PHP • Node.js • Express.js",
+        "text": "APIs, databases, authentication and payment integrations"
+      },
+      {
+        "label": "Cloud & database",
+        "tech": "Firebase • Firestore • Auth • Functions",
+        "text": "Cloud services, data storage and user management"
+      },
+      {
+        "label": "Integrations",
+        "tech": "Telegram API • Resend • CRM • Payments",
+        "text": "Process automation, bots and third-party services"
+      },
+      {
+        "label": "Analytics & optimisation",
+        "tech": "GA4 • Meta Pixel • Hotjar • PWA",
+        "text": "User analysis, performance and conversion improvements"
+      },
+      {
+        "label": "Tooling",
+        "tech": "Git • Vercel • Cloudflare • Figma",
+        "text": "Version control, deployment, design and site optimisation"
+      }
+    ]
+  },
+
+  "footer": {
+    "tags": ["Analytics", "UX/UI", "Development", "SEO", "Integrations", "Ads", "Marketing", "AI", "No-code"],
+    "heading": "Contact",
+    "policy": "Data processing policy",
+    "author": "Azim"
+  },
+
+  "messengers": {
+    "title": "Send me a message",
+    "titleTelegram": "Message me on Telegram",
+    "titleWhatsapp": "Message me on WhatsApp",
+    "telegramDesktop": "Open Telegram on desktop",
+    "whatsappDesktop": "Open WhatsApp on desktop",
+    "orQr": "or scan the QR code with your phone"
+  },
+
+  "js": {
+    "copySuccess": "Email copied!",
+    "copyError": "Couldn't copy",
+    "collapse": "Collapse",
+    "readMore": "Read more"
+  }
+}

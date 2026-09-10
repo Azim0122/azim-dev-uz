@@ -1,0 +1,15 @@
+{
+  "name": "azim-dev-uz",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Сайт-портфолио azim-dev.uz — статическая сборка, три языка (RU / UZ / EN)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node build.mjs && node scripts/verify.mjs",
+    "dev": "node build.mjs && node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
