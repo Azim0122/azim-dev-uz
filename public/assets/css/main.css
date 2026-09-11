@@ -45,7 +45,7 @@
 }
 .header__wrapper {
   gap: 6.8rem;
-  padding: 1.1rem 0rem 1.1rem 0rem;
+  padding: 1.1rem;
     transform: translateX(-2rem);
 }
 .header.is-scrolling .header__wrapper {
