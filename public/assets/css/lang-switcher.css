@@ -109,7 +109,7 @@
 
   .header__wrapper {
     gap: 4rem;
-    transform: none;
+  
   }
 
   .header.is-scrolling .header__wrapper {
