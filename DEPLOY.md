@@ -91,10 +91,14 @@ cd ~/Downloads/azim-dev
 npm install
 
 npx vercel link            # выбрать существующий проект azim-dev-uz
-npx vercel env pull .env   # запишет DATABASE_URL и SESSION_SECRET в .env
+npx vercel env pull .env   # запишет DATABASE_URL в .env
 
 npm run db:admin -- azim   # спросит пароль, в базу уйдёт только хэш
 ```
+
+`SESSION_SECRET` в `.env` не попадёт: на Vercel он заведён как Secret,
+и значение оттуда не выгружается обратно. Для этой команды он и не
+нужен — секрет подписывает куку сессии, а пароль хэшируется без него.
 
 Пароль — не меньше 10 символов. Забытый пароль не восстанавливают,
 а задают заново этой же командой.

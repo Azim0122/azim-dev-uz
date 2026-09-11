@@ -9,9 +9,8 @@
  * только хэш — восстановить из него пароль нельзя.
  */
 
-import readline from 'node:readline/promises';
-import { stdin, stdout } from 'node:process';
 import { hashPassword } from '../api/_lib/auth.js';
+import { askPassword } from './ask-password.mjs';
 
 const login = process.argv[2];
 
@@ -20,38 +19,7 @@ if (!login) {
   process.exit(1);
 }
 
-/**
- * Пароль спрашиваем в терминале, но если команду запустили с
- * перенаправленным вводом (`... < file`, пайп), читаем оттуда —
- * иначе скрипт молча повиснет на первом же вопросе.
- */
-async function askPassword() {
-  if (stdin.isTTY) {
-    const rl = readline.createInterface({ input: stdin, output: stdout });
-    const first = await rl.question('Пароль (не меньше 10 символов): ');
-    const again = await rl.question('Повторите пароль: ');
-    rl.close();
-    return [first, again];
-  }
-
-  const chunks = [];
-  for await (const chunk of stdin) chunks.push(chunk);
-  const lines = Buffer.concat(chunks).toString('utf8').split('\n');
-  return [lines[0] ?? '', lines[1] ?? lines[0] ?? ''];
-}
-
-const [password, again] = await askPassword();
-
-if (password.length < 10) {
-  console.error('Пароль короче 10 символов — так не пойдёт');
-  process.exit(1);
-}
-if (password !== again) {
-  console.error('Пароли не совпали');
-  process.exit(1);
-}
-
-const hash = hashPassword(password);
+const hash = hashPassword(await askPassword());
 const esc = (value) => `'${String(value).replace(/'/g, "''")}'`;
 
 console.log('\n-- Вставьте это в SQL-редактор базы:\n');

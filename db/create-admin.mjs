@@ -8,11 +8,10 @@
  * восстанавливают, а задают заново этой же командой.
  */
 
-import readline from 'node:readline/promises';
-import { stdin, stdout } from 'node:process';
 import pg from 'pg';
 import { sslFor } from '../api/_lib/db.js';
 import { hashPassword } from '../api/_lib/auth.js';
+import { askPassword } from './ask-password.mjs';
 
 const login = process.argv[2];
 
@@ -24,25 +23,12 @@ if (!process.env.DATABASE_URL) {
   console.error('Не задана переменная DATABASE_URL');
   process.exit(1);
 }
-if (!process.env.SESSION_SECRET || process.env.SESSION_SECRET.length < 32) {
-  console.error('Не задан SESSION_SECRET (нужно не меньше 32 символов)');
-  process.exit(1);
-}
+// SESSION_SECRET здесь намеренно не проверяется: он подписывает куку
+// сессии, а пароль хэшируется без него. На Vercel эта переменная —
+// секрет, её значение обратно не выгружается, и требовать её локально
+// значило бы заставить человека держать копию секрета у себя.
 
-const rl = readline.createInterface({ input: stdin, output: stdout });
-
-const password = await rl.question('Пароль (не меньше 10 символов): ');
-const again = await rl.question('Повторите пароль: ');
-rl.close();
-
-if (password.length < 10) {
-  console.error('Пароль короче 10 символов — так не пойдёт');
-  process.exit(1);
-}
-if (password !== again) {
-  console.error('Пароли не совпали');
-  process.exit(1);
-}
+const password = await askPassword();
 
 const client = new pg.Client({
   connectionString: process.env.DATABASE_URL,
