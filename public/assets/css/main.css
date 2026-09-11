@@ -46,7 +46,7 @@
 .header__wrapper {
   gap: 6.8rem;
   padding: 0.5rem 0.5rem 0.5rem 1.2rem;
-  transform: translateX(4rem);
+  transform: translateX(9rem);
 }
 .header.is-scrolling .header__wrapper {
   transform: translateX(0);
