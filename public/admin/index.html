@@ -34,6 +34,37 @@
     </form>
   </div>
 
+  <!-- Первый вход: в базе ещё нет ни одного админа -->
+  <div class="screen screen--center" id="screen-setup" hidden>
+    <form class="login" id="setup-form" autocomplete="on">
+      <h1 class="login__title">Первый вход</h1>
+      <p class="login__subtitle">Придумайте логин и пароль — других пользователей у админки не будет.</p>
+
+      <label class="field">
+        <span class="field__label">Логин</span>
+        <input class="field__input" type="text" name="login" value="azim" autocomplete="username"
+          pattern="[a-zA-Z0-9._\-]{3,60}" required>
+        <span class="field__hint">Латиница и цифры, от 3 символов.</span>
+      </label>
+
+      <label class="field">
+        <span class="field__label">Пароль</span>
+        <input class="field__input" type="password" name="password" autocomplete="new-password" minlength="10"
+          required>
+        <span class="field__hint">Не меньше 10 символов. Восстановить его нельзя — только задать заново.</span>
+      </label>
+
+      <label class="field">
+        <span class="field__label">Пароль ещё раз</span>
+        <input class="field__input" type="password" name="again" autocomplete="new-password" minlength="10" required>
+      </label>
+
+      <p class="form-error" id="setup-error" hidden></p>
+
+      <button class="button button--primary button--full" type="submit">Создать и войти</button>
+    </form>
+  </div>
+
   <!-- Рабочая область -->
   <div class="screen" id="screen-app" hidden>
     <header class="topbar">
