@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "outputDirectory": "public",
-  "trailingSlash": true,
+  "buildCommand": "node db/bootstrap.mjs",
 
   "functions": {
     "api/**/*.js": {
@@ -12,15 +12,16 @@
 
   "rewrites": [
     { "source": "/", "destination": "/api/page?lang=ru" },
-    { "source": "/uz", "destination": "/api/page?lang=uz" },
     { "source": "/uz/", "destination": "/api/page?lang=uz" },
-    { "source": "/en", "destination": "/api/page?lang=en" },
     { "source": "/en/", "destination": "/api/page?lang=en" }
   ],
 
   "redirects": [
     { "source": "/index.php", "destination": "/", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/uz", "destination": "/uz/", "permanent": true },
+    { "source": "/en", "destination": "/en/", "permanent": true },
+    { "source": "/admin", "destination": "/admin/", "permanent": false }
   ],
 
   "headers": [
