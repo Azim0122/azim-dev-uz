@@ -88,12 +88,22 @@ async function api(path, { method = 'GET', body, raw, query } = {}) {
 
 function showLogin() {
   el('screen-app').hidden = true;
+  el('screen-setup').hidden = true;
   el('screen-login').hidden = false;
   $('#login-form input[name="login"]').focus();
 }
 
+/** Первый вход: админа в базе ещё нет, вместо входа предлагаем его создать. */
+function showSetup() {
+  el('screen-app').hidden = true;
+  el('screen-login').hidden = true;
+  el('screen-setup').hidden = false;
+  $('#setup-form input[name="password"]').focus();
+}
+
 function showApp() {
   el('screen-login').hidden = true;
+  el('screen-setup').hidden = true;
   el('screen-app').hidden = false;
 }
 
@@ -617,6 +627,42 @@ el('login-form').addEventListener('submit', async (event) => {
   }
 });
 
+el('setup-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const form = event.target;
+  const error = el('setup-error');
+  const submit = form.querySelector('button[type="submit"]');
+
+  error.hidden = true;
+
+  if (form.password.value !== form.again.value) {
+    error.textContent = 'Пароли не совпали';
+    error.hidden = false;
+    return;
+  }
+
+  submit.disabled = true;
+
+  try {
+    const result = await api('/auth/setup', {
+      method: 'POST',
+      body: { login: form.login.value.trim(), password: form.password.value },
+    });
+
+    state.user = result.user;
+    form.reset();
+    showApp();
+    await loadAll();
+    toast(`Готово. Логин — ${result.user.login}`);
+  } catch (setupError) {
+    error.textContent = setupError.message;
+    error.hidden = false;
+  } finally {
+    submit.disabled = false;
+  }
+});
+
 el('logout').addEventListener('click', async () => {
   await api('/auth/logout', { method: 'POST' });
   state.user = null;
@@ -757,11 +803,13 @@ document.addEventListener('keydown', (event) => {
 /* ================================================================== */
 
 try {
-  const { user } = await api('/auth/session');
+  const { user, needsSetup } = await api('/auth/session');
   if (user) {
     state.user = user;
     showApp();
     await loadAll();
+  } else if (needsSetup) {
+    showSetup();
   } else {
     showLogin();
   }
